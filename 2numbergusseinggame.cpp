@@ -28,7 +28,10 @@ int main() {
 
             if (userGuess < numberToGuess) {
                 cout << "Oops! Too low. Aim a bit higher!" << endl;
-            } else if (userGuess > numberToGuess) {
+            } else if (abs(userGuess - numberToGuess) <= 10) {
+                cout << "You're close! Try again.\n";
+                }
+            else if (userGuess > numberToGuess) {
                 cout << "Whoa! That's too high. Try a smaller number." << endl;
             } else {
                 cout << "Hooray! You've guessed the number " << numberToGuess << " correctly!" << endl;
